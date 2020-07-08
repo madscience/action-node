@@ -23,8 +23,7 @@ jobs:
           registry: docker.pkg.github.com
           repository: madscience/action-node/action-node
           always_pull: true
-          tags:
-            - ${{ steps.determine_tag.outputs.tag }}
+          tags: ${{ steps.determine_tag.outputs.tag }}
           push: ${{ startsWith(github.ref, 'refs/tags/') }}
     outputs:
       tag: ${{ steps.determine_tag.outputs.tag }}
