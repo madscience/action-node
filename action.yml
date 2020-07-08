@@ -1,0 +1,14 @@
+name: node
+description: Node.js container with extra utilities
+inputs:
+  command:
+    description: Command to execute in the container
+    required: true
+    default: echo "Missing command argument." && exit 1
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - '/bin/sh'
+    - '-c'
+    - ${{ inputs.command }}
