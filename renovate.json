@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "config:base",
+    ":automergeMajor",
+    ":automergePr",
+    ":automergeRequireAllStatusChecks",
+    ":masterIssue"
+  ],
+  "encrypted": {
+    "npmToken": "csFTMPgPdr400KF9mnD9nqBZPfURgVTynd8Begz+Wp0SFwx1M2HQDRn63+c0D4md2DQIEE0nSbB22EDnigs7T3ZyaoXbtlXh8W5ld877WVKInmKMmwFyHQGLyBnyX4lNauxmtriVDEhHj74rYR6rxCPXnnbcWnR11pX6ATj69y//6fNg5flMXNV+5+un03MnLReEGBNsNJAeRFW3sKzf+0CF++EEUA/P4zpcjS8zKyj+UTlPqhoTy0rGSbVDAaDurAbCXZRzL36dPLwjz0z2Z1Ug57M312+CW/W09ecL4SNJ4MyXhq7en8FKpI/bxFWCDABlhmy9650dLk86ZsAtOg=="
+  },
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 10,
+  "rebaseWhen": "conflicted",
+  "labels": [
+    "dependencies"
+  ],
+  "reviewers": [
+    "sgarner"
+  ]
+}
