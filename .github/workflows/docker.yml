@@ -34,7 +34,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Publish release tags to GitHub Package Registry
+      - name: Publish release tags to Docker Hub
         uses: flownative/action-docker-publish-semver@v1.2.0
         with:
           tag_ref: ${{ needs.build.outputs.tag }}
