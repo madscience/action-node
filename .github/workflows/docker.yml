@@ -28,10 +28,13 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - id: determine_tag
+        name: Determine tag version
+        run: echo "::set-output name=tag::$(echo ${{ github.ref }} | sed -e 's|refs/tags/||')"
       - name: Publish release tags to GitHub Package Registry
         uses: flownative/action-docker-publish-semver@v1.2.0
         with:
-          tag_ref: ${{ github.ref }}
+          tag_ref: ${{ steps.determine_tag.outputs.tag }}
           tag_latest: yes
           #tag_custom: 'some-custom-tag'
 
