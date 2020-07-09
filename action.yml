@@ -7,7 +7,7 @@ inputs:
     default: echo "Missing command argument." && exit 1
 runs:
   using: docker
-  image: docker://madsci/action-node:latest
+  image: docker://madsci/action-node:0.0.5
   args:
     - '/bin/sh'
     - '-c'
